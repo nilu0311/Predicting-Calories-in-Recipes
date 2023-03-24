@@ -148,5 +148,52 @@ The R2  value of the final model on the training data is over 90% while it is al
 For our evaluation metric, the RMSE of predictions of the final model for the training and test data are nearly identical, which is a good indicator that the model generalizes equally well to both training and test data, and is not overfitting to the training set. Additionally, the RMSE values of around 133 calories for the final model, are much less than the RMSE of approximately 174 calories for the baseline. Therefore, according to our evaluation metric, the final model does a better job than the baseline at predicting the values of the `calories` of a recipe, and therefore models the data better than the baseline.
 
 
+---
+<br/>
+
+
+## Fairness Analysis
+
+
+
+
+In this section, we will evaluate if our final model performs better in predicting `calories` for recipes that have a value of `fat` below the average value of `fat` in the dataset, as compared to predicting `calories` for recipes that have a value of `fat` above average.  
+
+We will conduct all testing in this step on the test set of our data.
+
+To the test set DataFrame, we assign a column called `fat_bracket` with different labels for if a recipe has `fat` content above or below average, a column containing the predictions of the final model for `calories` of that recipe, and a column containing the actual values of `calories` for that recipe.
+
+As we have been doing through this analysis, our evaluation metric for how well our model predicts `calories` is RMSE. 
+
+Grouping recipes based on whether or not they have `fat` content above the average, we see mean predictions of `calories` as below:
+
+| fat_bracket   |   prediction |
+|:--------------|-------------:|
+| above_avg     |      441.173 |
+| below_avg     |      205.782 |
+
+
+Calculating the RMSEs of the model separately for recipes that have `fat` content above and below the average, we see values as below:
+
+| fat_bracket   |    rmse |
+|:--------------|--------:|
+| above_avg     | 146.086 |
+| below_avg     | 122.85  |
+
+
+Our permutation test setup to check model performance on each of these groups is as below:
+
+- Null Hypothesis: The RMSE of the final model is the same for both recipes with `fat` content above average and below average, and any    differences are due to chance.
+- Alternative Hypothesis: The RMSE of the final model is lower for recipes with `fat` content below average.
+- Test statistic: Difference in group RMSE 
+    (RMSE(`fat` content above average) - RMSE(`fat` content below average)).
+- Significance level: 0.01
+
+
+The resulting p-value of this permutation test is `0.0`, and we thus reject the null hypothesis in favor of the alternative hypothesis, which states that our final model performed better in predicting `calories` for recipes with `fat` content below average.
+
+The plot below visualizes the results of our permutation test.
+
+
 
 <iframe src="grah.html" width=800 height=600 frameBorder=0></iframe>
