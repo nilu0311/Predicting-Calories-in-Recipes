@@ -135,7 +135,7 @@ Predicting `calories` in the training set and the test set using this final fitt
 | Rsq  |           0.920818 |          0.693116 |             0.830279 |
 
 
-The performance of this final model is an improvement over the baseline, both in terms of our evaluation metric, the RMSE, as well as the R2  value on both the training and test set. 
+The performance of this final model is an improvement over the baseline, both in terms of our evaluation metric, the RMSE, as well as the Rsq  value on both the training and test set. 
 
 |      |   final - base test |
 |:-----|--------------------:|
