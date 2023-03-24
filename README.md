@@ -143,6 +143,10 @@ The performance of this final model is an improvement over the baseline, both in
 | Rsq  |            0.606031 |
 
 
-The R2  value of the final model on the training data is over 90% while it is almost 70% on the test data. This shows evidence of some overfitting on the training set, since the model explained the variance of `calories` in the training set more than it did in the test set. However, in both cases, the R2  value of the final model on both the training and the test set is significantly better than those of the baseline, indicating that the final model, at the very minimum across both the training and test sets, explains 60% more of the variance in `calories`.
+The R2  value of the final model on the training data is over 90% while it is almost 70% on the test data. This shows evidence of some overfitting on the training set, since the model explained more of the variance of `calories` in the training set than it did in the test set. However the R2  values of the final model on both the training and the test set are significantly better than those of the baseline, indicating that the final model, at the very minimum across both the training and test sets, explains 60% more of the variance in `calories` than the baseline.
 
-For our evaluation metric, the RMSE of prediction of the final model for the training and test data are nearly identical, which is a good indicator that the model generalizes equally well to both training and test data, and is not overfitting to the training set. Additionally, the RMSE values of around 133 calories are much less than the approximately 174 calories for the baseline.
+For our evaluation metric, the RMSE of predictions of the final model for the training and test data are nearly identical, which is a good indicator that the model generalizes equally well to both training and test data, and is not overfitting to the training set. Additionally, the RMSE values of around 133 calories for the final model, are much less than the RMSE of approximately 174 calories for the baseline. Therefore, according to our evaluation metric, the final model does a better job than the baseline at predicting the values of the `calories` of a recipe, and therefore models the data better than the baseline.
+
+
+
+<iframe src="grah.html" width=800 height=600 frameBorder=0></iframe>
