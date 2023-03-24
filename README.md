@@ -51,8 +51,8 @@ We then calculated the RMSE and R^2 values of this baseline model on the trainin
 
 |   baseline train data |   baseline test data |
 |----------------------:|---------------------:|
-|           174.402     |          175.125     |
-|             0.0890051 |            0.0917294 |
+|           174.573     |          174.619     |
+|             0.0905381 |            0.0870858 |
 
 <br/>
 
@@ -66,8 +66,8 @@ However, the RMSE values of the baseline on both the training and test data is a
 
 |   Calories std |
 |---------------:|
-|        182.723 |
-|        183.755 |
+|        183.056 |
+|        182.758 |
 
 <br/>
 
@@ -129,4 +129,7 @@ We used a `GridSearchCV` to determine the best combination of `max_depth` and `n
 
 Predicting `calories` in the training set and the test set using this final fitted model resulted in RMSE and R^2 values as below. The final columns in this table show the difference between the RMSE and  R^2 values of the final and baseline model for the training set and the test set:
 
-
+|   final train data |   final test data |   final - base train |   final - base test |
+|-------------------:|------------------:|---------------------:|--------------------:|
+|         133.473    |        132.997    |           -41.0994   |          -41.6217   |
+|           0.920818 |          0.693116 |             0.830279 |            0.606031 |
