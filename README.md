@@ -129,10 +129,10 @@ We used a `GridSearchCV` to determine the best combination of `max_depth` and `n
 
 Predicting `calories` in the training set and the test set using this final fitted model resulted in RMSE and R^2 values as below. The final columns in this table show the difference between the RMSE and  R^2 values of the final and baseline model for the training set and the test set:
 
-|      |   final train data |   final test data |   final - base train |
-|:-----|-------------------:|------------------:|---------------------:|
-| RMSE |         133.473    |        132.997    |           -41.0994   |
-| Rsq  |           0.920818 |          0.693116 |             0.830279 |
+|      |   final train data |   final test data |
+|:-----|-------------------:|------------------:|
+| RMSE |         133.473    |        132.997    |
+| Rsq  |           0.920818 |          0.693116 |
 
 
 The performance of this final model is an improvement over the baseline, both in terms of our evaluation metric, the RMSE, as well as the Rsq  value on both the training and test set. 
