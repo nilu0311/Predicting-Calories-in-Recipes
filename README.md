@@ -49,10 +49,10 @@ We then fit a linear regression model on the training data, with `X_train` being
 
 We then calculated the RMSE and R^2 values of this baseline model on the training set and the test set, which yielded the results seen below:
 
-|   baseline train data |   baseline test data |
-|----------------------:|---------------------:|
-|           174.573     |          174.619     |
-|             0.0905381 |            0.0870858 |
+|      |   baseline train data |   baseline test data |
+|:-----|----------------------:|---------------------:|
+| RMSE |           174.573     |          174.619     |
+| Rsq  |             0.0905381 |            0.0870858 |
 
 <br/>
 
@@ -64,10 +64,10 @@ For our metric of interest, RMSE, the values for the training and test data are 
 
 However, the RMSE values of the baseline on both the training and test data is around 174 calories, while the standard deviation of `calories` for both is around 183 calories (the exact values can be seen below). 
 
-|   Calories std |
-|---------------:|
-|        183.056 |
-|        182.758 |
+|         |   Calories std |
+|:--------|---------------:|
+| y_train |        183.056 |
+| y_test  |        182.758 |
 
 <br/>
 
@@ -129,7 +129,7 @@ We used a `GridSearchCV` to determine the best combination of `max_depth` and `n
 
 Predicting `calories` in the training set and the test set using this final fitted model resulted in RMSE and R^2 values as below. The final columns in this table show the difference between the RMSE and  R^2 values of the final and baseline model for the training set and the test set:
 
-|   final train data |   final test data |   final - base train |   final - base test |
-|-------------------:|------------------:|---------------------:|--------------------:|
-|         133.473    |        132.997    |           -41.0994   |          -41.6217   |
-|           0.920818 |          0.693116 |             0.830279 |            0.606031 |
+|      |   final train data |   final test data |   final - base train |   final - base test |
+|:-----|-------------------:|------------------:|---------------------:|--------------------:|
+| RMSE |         133.473    |        132.997    |           -41.0994   |          -41.6217   |
+| Rsq  |           0.920818 |          0.693116 |             0.830279 |            0.606031 |
