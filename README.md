@@ -1,5 +1,5 @@
 # Predicting Calories in a Recipe - Working Towards a Machine Learning Model
-
+Cassidy Lu and Harshita Saha
 
 <br/>
 
